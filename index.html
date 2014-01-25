@@ -1,0 +1,28 @@
+	<html>
+	<head>
+		<link href='http://fonts.googleapis.com/css?family=Bigelow+Rules' rel='stylesheet' type='text/css'>
+		<script src='http://code.jquery.com/jquery-1.10.2.js' type='text/javascript'></script>
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src='http://code.angularjs.org/1.1.5/angular.js' type='text/javascript'></script>
+		<script src='app.js' type='text/javascript'></script>
+		<script src='directives.js' type='text/javascript'></script>
+		<script src='controller.js' type='text/javascript'></script>
+	</head>
+
+	<body ng-app="">
+		<div class="container" ng-controller="">
+			<h2>Chatty - <span class="em">"Chat it up!"</span></h2>
+			<div class="messages"> 
+			<div class="text" ng-repeat="">
+				<p> {{myMessage.input}}  </p>
+			</div>
+			</div>
+			<div class="input">
+				<input type="text" ng-model='newMessage' ng-enter='addMessage()' autofocus/>
+			</div>
+		</div>
+	</body>
+</html>
